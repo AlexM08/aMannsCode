@@ -1,0 +1,78 @@
+body {
+    background-image: url("img/Background.jpeg");
+    background-repeat: repeat;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 50px;
+    color: blue;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header SideElement"
+    "Who-we-are Why-we-are SideElement"
+    "When-we-are When-we-are SideElement"
+    "footer footer footer";
+}
+
+header {
+    font-size: 50px;
+    grid-area: header;
+    display: flex;
+}
+
+#dancingbaby {
+    animation: animate 4s linear infinite;
+}
+
+h1 {
+    animation: animate 1.5s linear infinite;
+    flex-grow: 1;
+} 
+
+#rangers-and-turtles {
+    animation: animate 2.5s linear infinite;
+}
+ 
+@keyframes animate{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1.0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+#Who-we-are > img{
+    grid-area: Who-we-are;
+    height: 200px;
+    width: 400px;
+}
+#When-we-are {
+    grid-area: When-we-are;
+}
+
+
+#Why-we-are {
+grid-area: Why-we-are;
+}
+
+#SideElement{
+    grid-area: SideElement;
+}        
+
+footer {
+    grid-area: footer;
+    display: flex;
+}
+
+#jackhammer {
+    flex-grow: 1;
+}
+
+#music {
+    flex-grow: 0;
+}
+
+
